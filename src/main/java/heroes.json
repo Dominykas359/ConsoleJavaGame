@@ -1,0 +1,86 @@
+{
+  "Heroes": [
+    {
+      "Class": "Healer",
+      "Name": "Sirus",
+      "HP": 85,
+      "Attack": 9,
+      "Strength": 54,
+      "Ability": 25
+    },
+    {
+      "Class": "Mage",
+      "Name": "Lyria",
+      "HP": 60,
+      "Attack": 25,
+      "Strength": 63,
+      "Ability": 11
+    },
+    {
+      "Class": "Tank",
+      "Name": "Draven",
+      "HP": 150,
+      "Attack": 6,
+      "Strength": 49,
+      "Ability": 15
+    },
+    {
+      "Class": "Warrior",
+      "Name": "Elara",
+      "HP": 105,
+      "Attack": 16,
+      "Strength": 51,
+      "Ability": 0
+    },
+    {
+      "Class": "Warrior",
+      "Name": "Thalgar",
+      "HP": 96,
+      "Attack": 21,
+      "Strength": 58,
+      "Ability": 0
+    }
+  ],
+  "Monsters": [
+    {
+      "Class": "Mage",
+      "Name": "Althea",
+      "HP": 75,
+      "Attack": 10,
+      "Strength": 59,
+      "Ability": 14
+    },
+    {
+      "Class": "Warrior",
+      "Name": "Darian",
+      "HP": 95,
+      "Attack": 26,
+      "Strength": 67,
+      "Ability": 0
+    },
+    {
+      "Class": "Mage",
+      "Name": "Seraphina",
+      "HP": 80,
+      "Attack": 15,
+      "Strength": 57,
+      "Ability": 9
+    },
+    {
+      "Class": "Tank",
+      "Name": "Branor",
+      "HP": 110,
+      "Attack": 8,
+      "Strength": 48,
+      "Ability": 35
+    },
+    {
+      "Class": "Healer",
+      "Name": "Talia",
+      "HP": 95,
+      "Attack": 12,
+      "Strength": 52,
+      "Ability": 20
+    }
+  ]
+}
