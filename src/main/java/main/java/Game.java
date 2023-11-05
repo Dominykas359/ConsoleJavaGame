@@ -121,10 +121,10 @@ class Game {
             }
             this.updateQueue();
             this.checkIfDead();
-            if(heroList.size() == 0){
+            if(heroList.isEmpty()){
                 lost = true;
             }
-            else if(monsterList.size() == 0){
+            else if(monsterList.isEmpty()){
                 won = true;
             }
         }
@@ -218,7 +218,7 @@ class Game {
     public void playerAttack(Hero hero){
         Scanner input = new Scanner(System.in);
         String name;
-        String message = hero.getName();
+        StringBuilder message = new StringBuilder(hero.getName());
         boolean contains = false;
         while(!contains){
             System.out.print("Choose a target: ");
@@ -227,25 +227,25 @@ class Game {
                 if(m.getName().equals(name)){
                     contains = true;
                     m.updateHP(hero.getAttack());
-                    message += " dealt ";
-                    message += Integer.toString(hero.getAttack());
-                    message += " damage to ";
-                    message += m.getName();
-                    message += ".";
+                    message.append(" dealt ");
+                    message.append(hero.getAttack());
+                    message.append(" damage to ");
+                    message.append(m.getName());
+                    message.append(".");
                     break;
                 }
             }
         }
-        previousActions.add(message);
+        previousActions.add(message.toString());
     }
     public void playerUseAbility(Hero hero){
         Scanner input = new Scanner(System.in);
         String name;
-        String message = hero.getName();
+        StringBuilder message = new StringBuilder(hero.getName());
         boolean contains = false;
         if(hero.getClass1().equals("Tank")){
             hero.heal(hero.getAbility());
-            message += " put shield on itself";
+            message.append(" put shield on itself");
         }
         else {
             while (!contains) {
@@ -256,25 +256,25 @@ class Game {
                         contains = true;
                         if (hero.getClass1().equals("Healer")) {
                             h.heal(hero.getAbility());
-                            message += " healed ";
-                            message += h.getName();
-                            message += " by ";
-                            message += Integer.toString(hero.getAbility());
+                            message.append(" healed ");
+                            message.append(h.getName());
+                            message.append(" by ");
+                            message.append(hero.getAbility());
                         }
                         else if (hero.getClass1().equals("Mage")) {
                             h.updateAttack(hero.getAbility());
-                            message += " increased ";
-                            message += h.getName();
-                            message += "'s attack by ";
-                            message += Integer.toString(hero.getAbility());
+                            message.append(" increased ");
+                            message.append(h.getName());
+                            message.append("'s attack by ");
+                            message.append(hero.getAbility());
                         }
                         break;
                     }
                 }
             }
         }
-        message += ".";
-        previousActions.add(message);
+        message.append(".");
+        previousActions.add(message.toString());
         hero.updateAbility();
     }
     public static void clearConsole() {
