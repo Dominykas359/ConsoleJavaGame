@@ -59,6 +59,7 @@ class Game {
             choice = "";
             //To look at a first hero in the queue
             move = heroQueue.peek();
+            //Variable to check if the hero is human's or computer's
             boolean human = false;
             for (Hero h : heroList) {
                 if (h.getName().equals(move)) {
