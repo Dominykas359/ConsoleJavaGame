@@ -57,6 +57,7 @@ class Game {
 
         while (!exit && !won && !lost) {
             choice = "";
+            //To look at a first hero in the queue
             move = heroQueue.peek();
             boolean human = false;
             for (Hero h : heroList) {
